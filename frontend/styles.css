@@ -1,0 +1,781 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+/* Logo size adjustment */
+.logo {
+    max-height: 50px;
+    width: auto;
+}
+
+/* Navbar toggler styles (custom hamburger icon) */
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.toggler-icon {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar-toggler:not(.collapsed) .top-bar {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) .middle-bar {
+    opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) .bottom-bar {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mega Menu Styles */
+/* Use the combined selector to target the dropdown menu with the mega-menu class */
+.dropdown-menu.mega-menu {
+   
+    width: 40vw !important;
+   height:19vw;
+   
+   
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+    /* Optional: set a background color for better visibility */
+    background-color: #f8f9fa !important;
+    transform: translate(-50%, 0);
+}
+
+/* For larger screens, show mega menu on hover (optional) */
+@media (min-width: 992px) {
+    .mega-dropdown:hover > .dropdown-menu {
+        display:block !important;
+    }
+}
+
+/* Optional: Adjust dropdown item padding */
+
+
+/* Optional: Style headings in mega menu */
+.dropdown-menu.mega-menu h6 {
+    font-weight: bold;
+   padding:5px;
+}
+
+
+/* Item and interactive content styles (unchanged) */
+.item {
+    margin: 0 15px;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+    background: no-repeat center center;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+    .item:after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+       
+    }
+
+.item-desc {
+    padding: 0 24px 12px;
+   
+}
+
+    .item-desc h3 {
+        font-size: 15px;
+        bottom: 30px;
+        transform: translateY(calc(100% - 54px));
+        transition: all 0.4s ease-in-out;
+        color: #fff;
+        text-shadow: #000 1px 1px 1px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .item-desc p {
+        
+        transform: translateY(10px);
+        transition: all 0.4s ease-in-out 0.2s;
+    }
+
+.items-wrapper {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item.active {
+    width: 500px;
+    box-shadow: 12px 40px 40px rgba(19, 19, 19, 0.25);
+}
+
+    .item.active .item-desc {
+        transform: none;
+    }
+
+        .item.active .item-desc p {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .item.active .item-desc h3 {
+            transform: translateY(0);
+        }
+
+
+
+@media (max-width: 1200px) {
+    .item {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 800px) {
+    .item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .item {
+        width: calc(100% - 20px);
+    }
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 80%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+    .hero-content h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+.btn-primary {
+    background-color: #c2a83e;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn-primary:hover {
+        background-color: #a8902e;
+    }
+
+.membership {
+    padding: 120px 50px;
+    text-align: center;
+    color: white;
+    background:  center center;
+}
+
+    .membership h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+.membership-plans {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.plan {
+    
+    background: transparent;
+    padding: 50px;
+    border-radius: 12px;
+    text-align: center;
+    width: 320px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+    .plan:hover {
+        transform: translateY(-10px);
+    }
+
+    .plan h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        color: #c2a83e;
+    }
+
+    .plan p {
+        font-size: 1.2rem;
+        color: #ddd;
+    }
+
+    .plan .btn {
+        background-color: #c2a83e;
+        color: black;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 12px 25px;
+        border-radius: 6px;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .plan .btn:hover {
+            background-color: #a8902e;
+        }
+
+/*  Feedback section styles   */
+
+
+.feedback-upload-section {
+    background: url('Images/Home.png') no-repeat center center ;
+    background-size: cover;
+    color: white;
+    text-align: left;
+    max-width: 100%;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.5);
+    padding:10%;
+}
+
+.feedback-upload-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.feedback-col, .upload-col {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.feedback-form, .upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+textarea, input[type="file"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid white;
+    background: none;
+    color: white;
+    outline: none;
+}
+
+    textarea::placeholder, input[type="file"]::placeholder {
+        color: #ccc;
+    }
+
+.upload-section {
+    padding: 50px 20px;
+    text-align: left;
+}
+#drop-area {
+    border: 3px dashed white;
+    
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: 0.3s;
+    display:inline-flex;
+}
+
+    #drop-area:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+
+
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background: #c2a83e;
+    color: black;
+}
+
+.btn-secondary {
+    background: #fff;
+    color: black;
+}
+
+.btn-primary:hover {
+    background: #a8902e;
+}
+
+.btn-secondary:hover {
+    background: #cecccc;
+}
+
+@media (max-width: 768px) {
+    .feedback-upload-row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+/*Carousal Section */
+
+.Clients{
+   
+
+}
+.card-carousal {
+    box-shadow: 0px 4px 8px 0px #BDBDBD;
+}
+.profile-pic {
+    width: 100px !important;
+    height: 100px;
+    
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+    background: 0 0;
+    color: white !important;
+    border: none;
+    padding: 5px 20px !important;
+    font: inherit;
+    font-size: 50px !important;
+}
+
+    .owl-carousel .owl-nav button.owl-next:hover, .owl-carousel .owl-nav button.owl-prev:hover {
+        color: white !important;
+        background-color: white !important;
+    }
+
+.owl-dots {
+    display: none;
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+}
+
+.item-carousal {
+    display: none;
+}
+
+.next {
+    display: block !important;
+    position: relative;
+    transform: scale(0.8);
+    transition-duration: 0.3s;
+    opacity: 0.6;
+}
+
+.prev {
+    display: block !important;
+    position: relative;
+    transform: scale(0.8);
+    transition-duration: 0.3s;
+    opacity: 0.6;
+}
+
+.item-carousal.show {
+    display: block;
+    transition-duration: 0.4s;
+}
+
+@media screen and (max-width: 999px) {
+    .next, .prev {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    .item-carousal {
+        display: block !important;
+    }
+}
+
+    /* Default club section styles */
+    .club {
+        padding: 120px 50px;
+        background: url('Images/club1.jpg') no-repeat center center; /* Default background */
+        background-size: cover;
+        text-align: center;
+        color: white;
+        transition: background 0.5s ease-in-out; /* Smooth transition */
+        min-height: 100vh; /* Full screen height */
+    }
+
+        /* Title styling */
+        .club h2 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+    /* Club gallery layout */
+    .club-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    /* Club card styles */
+    .club-card {
+        background: rgba(34, 34, 34, 0.8); /* Slight transparency */
+        padding: 40px;
+        border-radius: 10px;
+        text-align: center;
+        width: 320px;
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+    }
+
+        .club-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Club card image */
+        .club-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Club card headings */
+        .club-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: #c2a83e;
+        }
+
+        .club-card p {
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .club {
+            padding: 80px 20px;
+        }
+    }
+
+    .classes-section {
+        position: relative;
+        background: no-repeat center center;
+        background-size:cover;
+        color: white;
+        text-align: center;
+        overflow: hidden;
+       
+    }
+
+
+.class-background {
+    padding: 120px 50px;
+    text-align: center;
+    color: white;
+    background: no-repeat center center;
+    background-size: cover;
+}
+
+
+    .classes-section h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .classes-grid {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .class-card {
+        background: #c2a83e45;
+        padding: 40px;
+        border-radius: 10px;
+        text-align: center;
+        width: 320px;
+        transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+    }
+
+        .class-card.active {
+            background: rgba(0, 0, 0, 0.7);
+            color: white !important;
+        }
+
+        .class-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .class-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: #c2a83e;
+        }
+
+        .class-card p {
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+
+    /* Make the section full height */
+    .contact-section {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Full screen height */
+        overflow: hidden; /* Ensures the video doesn't overflow */
+    }
+
+    /* Background Video Styling */
+    .background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the video fills the screen without distortion */
+        z-index: -1; /* Places video in the background */
+    }
+
+    /* Contact Form Container */
+    .contact-form-container {
+        position: relative;
+        z-index: 1;
+        background: rgba(255, 255, 255); /* Semi-transparent white background */
+        padding: 30px;
+        border-radius: 10px;
+        width: 40%;
+        text-align: center;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: black;
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    }
+
+    /* Center the form vertically and horizontally */
+    .contact-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Form Fields */
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    /* Button Styling */
+    .contact-form button {
+        width: 100%;
+        padding: 10px;
+        background: #c2a83e;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .contact-form-container {
+            width: 90%;
+            padding: 20px;
+        }
+    }
+
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        text-align: left !important;
+    }
+
+
+        .footer .footer-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 3.5rem;
+            padding: 60px;
+        }
+
+    .footer-row .footer-col h4 {
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    .footer-col .links {
+        margin-top: 20px;
+    }
+
+        .footer-col .links li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+            .footer-col .links li a {
+                text-decoration: none;
+                color: #bfbfbf;
+            }
+
+                .footer-col .links li a:hover {
+                    color: #fff;
+                }
+
+    .footer-col p {
+        margin: 20px 0;
+        color: #bfbfbf;
+        max-width: 300px;
+    }
+
+    .footer-col form {
+        display: flex;
+        gap: 5px;
+    }
+
+    .footer-col input {
+        height: 40px;
+        border-radius: 6px;
+        background: none;
+        width: 100%;
+        outline: none;
+        border: 1px solid #7489C6;
+        caret-color: #fff;
+        color: #fff;
+        text-align: center;
+    }
+
+        .footer-col input::placeholder {
+            color: #ccc;
+        }
+
+    .footer-col form button {
+        background: #fff;
+        outline: none;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.2s ease;
+    }
+
+        .footer-col form button:hover {
+            background: #cecccc;
+        }
+
+    .footer-col .icons {
+        display: flex;
+        margin-top: 30px;
+        gap: 30px;
+        cursor: pointer;
+    }
+
+        .footer-col .icons i {
+            color: #afb6c7;
+        }
+
+            .footer-col .icons i:hover {
+                color: #fff;
+            }

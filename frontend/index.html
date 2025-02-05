@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    
+    <meta name=”viewport” content="width =device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet" />
+
+    <title>Click Fit - Fitness & Performance</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">    
+            <div class="container">
+                <a href="#">
+                    <img src="/Images/logo4.png" alt="Click Fit Logo" class="logo">
+                </a>
+
+                <!-- Custom Hamburger Button -->
+                <button class="navbar-toggler collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon top-bar"></span>
+                    <span class="toggler-icon middle-bar"></span>
+                    <span class="toggler-icon bottom-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Simple nav link -->
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+
+                        <!-- Mega Menu: Membership -->
+                        <li class="nav-item dropdown mega-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="membershipDropdown"
+                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Membership
+                            </a>
+                            <div class="dropdown-menu mega-menu p-4" aria-labelledby="membershipDropdown" style="background-image: url('Images/logo4.png');">
+                                <div class="row gx-2">
+                                    <div class="col-md-4">
+                                        <h6 class="text-uppercase">Plan Options</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a class="dropdown-item" href="#">Basic</a></li>
+                                            <li><a class="dropdown-item" href="#">Prime</a></li>
+                                            <li><a class="dropdown-item" href="#">Elite</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="text-uppercase">Benefits</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a class="dropdown-item" href="#">Gym Access</a></li>
+                                            <li><a class="dropdown-item" href="#">Personal Training</a></li>
+                                            <li><a class="dropdown-item" href="#">VIP Perks</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="text-uppercase">Extras</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a class="dropdown-item" href="#">Classes</a></li>
+                                            <li><a class="dropdown-item" href="#">Spa</a></li>
+                                            <li><a class="dropdown-item" href="#">Luxury Lounge</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Mega Menu: Classes -->
+                        <li class="nav-item dropdown mega-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="classesDropdown"
+                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Classes
+                            </a>
+                            <div class="dropdown-menu mega-menu p-4" aria-labelledby="classesDropdown" style="background-image: url('Images/logo4.png');">
+                                <div class="row g-0">
+                                    <div class="col-md-6 g-0">
+                                        <h6 class="text-uppercase">Fitness</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a class="dropdown-item" href="#">Yoga</a></li>
+                                            <li><a class="dropdown-item" href="#">Pilates</a></li>
+                                            <li><a class="dropdown-item" href="#">Cardio</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6 g-0">
+                                        <h6 class="text-uppercase">Strength</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a class="dropdown-item" href="#">Weightlifting</a></li>
+                                            <li><a class="dropdown-item" href="#">Body Pump</a></li>
+                                            <li><a class="dropdown-item" href="#">HIIT</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Other links -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#club">Clubs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+                    
+
+                </div>
+          
+        </nav>
+
+        <!--     Header -->
+
+
+        <header class="hero-section">
+            <video autoplay loop muted class="hero-video">
+                <source src="Images/vid2.mp4" type="video/mp4">
+            </video>
+            <div class="hero-content">
+                <h1>Achieve Your Fitness Goals</h1>
+                <div id="fact" class="fact-box"></div>
+                <br />
+                <button class="btn btn-primary">Join Now</button>
+            </div>
+        </header>
+
+        <!--     Membership Section -->
+
+        <section class="membership" style="background-image: url('Images/bck2.png')">
+            <div class="content container">
+                <h2>Membership & Benefits</h2>
+                <p>Experience elite training, premium facilities, and world-class fitness.</p>
+                <div class="items-wrapper membership-plans">
+                    <div class="item plan">
+                        <div class="item-desc ">
+                            <h3>Basic</h3>
+                            <p>Access to all gym equipment & classes</p>
+                            <p><strong>$50/month</strong></p>
+                            <button class="btn">Join Now</button>
+                        </div>
+                    </div>
+                    <div class="item plan active">
+                        <div class="item-desc ">
+                            <h3>Prime</h3>
+                            <p>Includes Personal Trainer & Spa Access</p>
+                            <p><strong>$100/month</strong></p>
+                            <button class="btn">Join Now</button>
+                        </div>
+                    </div>
+                    <div class="item plan">
+                        <div class="item-desc">
+                            <h3>Elite</h3>
+                            <p>Unlimited classes, luxury lounge & VIP perks</p>
+                            <p><strong>$200/month</strong></p>
+                            <button class="btn">Join Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--     Classes Section -->
+
+        <section class="classes-section" id="classSection">
+            <div class="class-background" id="classBackground" style="background-image: url('Images/class1.jpg')">
+                <div class="container-class">
+                    <h2>Discover Our Classes</h2>
+                    <p>Premium fitness experiences designed for every goal.</p>
+                    <div class="classes-grid">
+                        <div class="class-card active" data-image="Images/class1.jpg">
+                            <h3>HIIT</h3>
+                            <p>High-Intensity Interval Training for maximum results.</p>
+                        </div>
+                        <div class="class-card" data-image="Images/class2.jpg">
+                            <h3>Yoga</h3>
+                            <p>Find balance, strength, and flexibility.</p>
+                        </div>
+                        <div class="class-card" data-image="Images/class3.jpg">
+                            <h3>Strength</h3>
+                            <p>Build muscle and endurance with expert guidance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--     Clients Section -->
+
+        <section class="Clients">
+            <div class="container-fluid px-3 px-sm-5 my-5 text-center">
+                <h2 >What Our Clients Say</h2>
+                <div class="owl-carousel owl-theme">
+                    <div class="item-carousal first prev">
+                        <div class="card-carousal border-0 py-3 px-4">
+                            <div class="row justify-content-center">
+                                <img src="Images/pro1.jpg" class="img-fluid profile-pic mb-4 mt-3">
+                            </div>
+                            <h6 class="mb-3 mt-2">Marielle Haag</h6>
+                            <p class="content mb-5 mx-2">
+                                Click Fit isn’t just a fitness program—it’s a lifestyle. The combination of strength training, cardio, and mindfulness sessions has improved both my physical and mental health. The 3D effects and interactive classes make every workout exciting!
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item-carousal show">
+                        <div class="card-carousal border-0 py-3 px-4">
+                            <div class="row justify-content-center">
+                                <img src="Images/pro2.jpg" class="img-fluid profile-pic mb-4 mt-3">
+                            </div>
+                            <h6 class="mb-3 mt-2">Ximena Vegara</h6>
+                            <p class="content mb-5 mx-2">Click Fit completely transformed my fitness journey! The variety of classes keeps me motivated, and the trainers are super supportive. I love how easy it is to track my progress through their app. Highly recommend for anyone looking to stay consistent and have fun!</p>
+                        </div>
+                    </div>
+                    <div class="item-carousal next">
+                        <div class="card-carousal border-0 py-3 px-4">
+                            <div class="row justify-content-center">
+                                <img src="Images/pro3.jpg" class="img-fluid profile-pic mb-4 mt-3">
+                            </div>
+                            <h6 class="mb-3 mt-2">John Paul</h6>
+                            <p class="content mb-5 mx-2">What I love most about Click Fit is the supportive community. The trainers genuinely care, and the personalized workout plans are perfect for my fitness level. Plus, the family-friendly classes make it easy to stay active even with kids around!</p>
+                        </div>
+                    </div>
+                    <div class="item-carousal last">
+                        <div class="card-carousal border-0 py-3 px-4">
+                            <div class="row justify-content-center">
+                                <img src="Images/pro4.jpg" class="img-fluid profile-pic mb-4 mt-3">
+                            </div>
+                            <h6 class="mb-3 mt-2">William Doe</h6>
+                            <p class="content mb-5 mx-2">As someone with a busy schedule, Click Fit’s flexible plans and online classes are a game-changer. I can work out anytime, anywhere, without compromising on quality. The workouts are intense but manageable, and I’ve seen great results in just a few months!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--     Clubs Section -->
+
+        <section id="club" class="club">
+            <div class="container">
+                <h2>Discover Our Clubs</h2>
+                <p>State-of-the-art fitness destinations designed for performance and luxury.</p>
+                <div class="club-gallery">
+                    <div class="club-card" data-bg="Images/club1.jpg">
+                        <img src="Images/club1.jpg" alt="Luxury Gym">
+                        <h3>New York</h3>
+                        <p>Premium facilities in the heart of NYC.</p>
+                    </div>
+                    <div class="club-card" data-bg="Images/club2.jpg">
+                        <img src="Images/club2.jpg" alt="Modern Gym">
+                        <h3>Los Angeles</h3>
+                        <p>High-end fitness in the City of Angels.</p>
+                    </div>
+                    <div class="club-card" data-bg="Images/club3.jpg">
+                        <img src="Images/club3.jpg" alt="Elite Gym">
+                        <h3>Miami</h3>
+                        <p>Luxury fitness by the beach.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--     Contact us Section -->
+
+        <section class="contact-section" id="contact">
+            <video autoplay loop muted class="background-video">
+                <source src="Images/vid1.mp4" type="video/mp4">
+            </video>
+
+            <div class="contact-form-container">
+                <h2>Contact Us</h2>
+                <p>Get in touch for membership details, class schedules, or any inquiries.</p>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+
+
+
+                    <div id="drop-area">
+                        <label for="fileElem" style="cursor: pointer; padding: 10px 20px; background-color:gainsboro; color: black; border-radius:6px;display: inline-block; ">
+                            Upload Your Image
+                        </label>
+                        <input type="file" name="image" id="fileElem" style="display: none;">
+
+
+                        <div class="preview-container" id="preview">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+
+
+        <!--     Footer Section -->
+        <section class="footer">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Info</h4>
+                    <ul class="links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Compressions</a></li>
+                        <li><a href="#">Customers</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Collection</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="links">
+                        <li><a href="#">Free Designs</a></li>
+                        <li><a href="#">Latest Designs</a></li>
+                        <li><a href="#">Themes</a></li>
+                        <li><a href="#">Popular Designs</a></li>
+                        <li><a href="#">Art Skills</a></li>
+                        <li><a href="#">New Uploads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="links">
+                        <li><a href="#">Customer Agreement</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Media Kit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>
+                        Subscribe to our newsletter for a weekly dose
+                        of news, updates, helpful tips, and
+                        exclusive offers.
+                    </p>
+                    <form action="#">
+                        <input type="text" placeholder="Your email" required>
+                        <button type="submit">SUBSCRIBE</button>
+                    </form>
+                    <div class="icons">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</body>
+</html>
